@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: cs3219
+  name: cs3219-db
+spec:
+  selector:
+    app: cs3219-db
+  ports:
+    # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 3306
+      targetPort: 3306
